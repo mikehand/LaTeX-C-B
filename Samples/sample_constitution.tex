@@ -1,0 +1,60 @@
+\documentclass[constitution,final,withoutpreface,withoutoptional,11pt]{bylaws}
+\usepackage[color]{changebar}
+\usepackage{hyperref}
+\usepackage{mathpazo}
+\usepackage{xspace}
+\usepackage{url}
+\organization{ORGANIZATION-NAME}
+%\orglogo{LOGO_FILE}
+\adoptiondate{DATE OF ORIGINAL ADOPTION}
+\chapteramendmentdate{DATE OF ADOPTION BY MAIN BODY}
+
+\begin{document}
+\cbcolor{red}% the change bar color for amendments
+\frontmatter
+\maketitle
+\setcounter{tocdepth}{2} %what level will appear in the TOC 0:Chapter only 1: Chapter and Section, etc.
+\tableofcontents
+\newpage
+\mainmatter
+\chapter*{Preamble}\addcontentsline{toc}{chapter}{Preamable}
+The ORGANIZATION was FOUNDED in Ann Arbor on June 14, 1906. 
+
+\chapter{An Article}
+
+\section{A section}
+Section info
+
+
+\section{Another section}This section has a list. Make sure to use the itemnotoc command to avoid the list appearing in the TOC.
+
+\begin{compactenum}[1.]
+\itemnotoc  Item 1
+\itemnotoc  Item 2
+\itemnotoc Item 3
+\end{compactenum}
+Information can come after the list
+
+\chapter{Another chapter}
+
+
+\section{A section with sub sections}
+\begin{enumsubsection}
+\item{Subsection 1} The enumsubsection environment is used to indent subsections properly while continuing section numbering. By using the item command the title will appear in the text and in the TOC (provided that the depth is set such that it will show).
+\item*{Subsection 2}
+ item* will cause the title to not appear in the text but will be in the TOC.
+
+\itemnotoc
+ itemnotoc will not have a title and not appear in the TOC. It is also possible to have a subsub section using the enumsubsubsection environment
+\begin{enumsubsubsection}
+
+\itemnotoc Item 1
+\itemnotoc Item 2
+
+
+ \end{enumsubsubsection}
+\end{enumsubsection}
+
+\section{}
+A section doesn't need a name. If it doesn't have one, simply leave it blank.
+\end{document}
